@@ -1,6 +1,6 @@
 <?php
 
-require_once 'extract_thumbnail.php';
+require_once 'ThumbnailExtractor.php';
 
 // Vérifier si un argument a été fourni
 if ($argc < 2) {
@@ -17,7 +17,8 @@ if (!file_exists($videoPath)) {
 $outputPath = pathinfo($videoPath, PATHINFO_FILENAME) . '_thumbnail.jpg';
 
 try {
-    if (extractBestThumbnailSmart($videoPath, $outputPath, 10)) {
+    $extractor = new ThumbnailExtractor();
+    if ($extractor->extractBestThumbnailSmart($videoPath, $outputPath, 15)) {
         echo "Vignette extraite avec succès : $outputPath\n";
     } else {
         echo "Erreur lors de l'extraction de la vignette.\n";
