@@ -17,7 +17,7 @@ if (!file_exists($videoPath)) {
 $outputPath = pathinfo($videoPath, PATHINFO_FILENAME) . '_thumbnail.jpg';
 
 try {
-    if (extractBestThumbnail($videoPath, $outputPath, 8)) {
+    if (extractBestThumbnailSmart($videoPath, $outputPath, 10)) {
         echo "Vignette extraite avec succès : $outputPath\n";
     } else {
         echo "Erreur lors de l'extraction de la vignette.\n";
