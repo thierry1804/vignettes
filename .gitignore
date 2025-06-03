@@ -1,0 +1,35 @@
+# Ignorer les images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+
+# Ignorer les vidéos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+*.3gp
+*.3g2
+*.flv
+*.wmv
+*.mpeg
+*.mpg
+*.mts
+*.m2ts
+*.ts
+*.vob
+*.ogv
+*.divx
+*.f4v
+*.rm
+*.rmvb
+*.asf
+*.mxf
+
+# Ignorer les dossiers de vignettes générés
+thumbnails_*/ 

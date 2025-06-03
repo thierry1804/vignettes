@@ -14,11 +14,10 @@ if (!file_exists($videoPath)) {
     die("Erreur BEVATA: Le fichier '$videoPath' n'existe pas.\n");
 }
 
-// Créer le nom du fichier de sortie (même nom que la vidéo mais avec extension .jpg)
 $outputPath = pathinfo($videoPath, PATHINFO_FILENAME) . '_thumbnail.jpg';
 
 try {
-    if (extractThumbnail($videoPath, $outputPath)) {
+    if (extractBestThumbnail($videoPath, $outputPath, 8)) {
         echo "Vignette extraite avec succès : $outputPath\n";
     } else {
         echo "Erreur lors de l'extraction de la vignette.\n";
